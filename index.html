@@ -10,8 +10,11 @@
     
     <div class="container">
         <div class="row">
-        <div class="col-12">
-            <p class="h1">Boostrap example</p>
+            <div class="col-6">
+                <p class="h1">Boostrap example</p>
+            </div>
+            <div class="col-6">
+                <p class="h3">Esercitiazione per jquery: validatione lato client</p>
             </div>
         </div>
         <div class="row">
@@ -26,7 +29,9 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
+                    
                     <button type="button" class="btn btn-primary" id="showPwd">Show</button>
+                    <span id="clearPassword"></span>
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -39,6 +44,21 @@
     
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $("button#showPwd").click(function(e) {
+        $(this).html("Clicked");
+        let encPwd = $("#exampleInputPassword1").val();
+        let mySpan = $("#clearPassword");
+        
+        console.log(encPwd);    //debug
+        mySpan.text(encPwd);
+    
+        })
+    })
+    
+</script>
 </body>
 </html>
