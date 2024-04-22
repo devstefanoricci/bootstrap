@@ -12,8 +12,14 @@ $(document).ready(function() {
     
         })
 
+        function isEmail(email) {
+            return emailPattern.test(email)
+        }
+
         $("button#verifyEmail").click(function(e) {
             let email = $("#exampleInputEmail1").val();
-            return emailPattern.test(email);
+            if (!isEmail(email)) {
+                alert ("Email non corretta!");
+            };
         })
     })
