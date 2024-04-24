@@ -2,7 +2,7 @@
 $email = $_GET["email"];
 
 
-echo "".$email."";
+echo "".$email.""; 
 
 
 
