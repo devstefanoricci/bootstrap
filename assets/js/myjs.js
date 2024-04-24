@@ -1,7 +1,6 @@
 $(document).ready(function() {
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-
         $("button#showPwd").click(function(e) {
         $(this).html("Clicked");
         let encPwd = $("#exampleInputPassword1").val();
